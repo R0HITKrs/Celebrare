@@ -1,0 +1,341 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scroll during animation */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left, .right {
+    width: 50%;
+    transition: width 1s ease-in-out;
+    position: relative;
+    height: 100vh;
+}
+
+.left {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.side{
+    position: absolute;
+    right:10px;
+    color: gray;
+    font:bold;
+    display: flex;
+    align-items: center;
+
+    .enroll{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 30px;
+        background-color: #fff;
+        color: green;
+        font:bold;
+        border: 1px solid gray;
+    }
+}
+
+.white-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    transition: all 1s ease-in-out;
+    color: green;
+    text-align: center;
+    h1{
+        font-size: 48px;
+        line-height: normal;
+        padding: 0;
+        margin: 10px;
+    }
+    div{
+        margin: 10px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: black;
+        gap: 10px;
+    }
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+/* Custom checkbox container */
+.custom-checkbox {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 128, 0, 0.489);
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* When the checkbox is checked, show the green checkmark */
+.hidden-checkbox:checked + .custom-checkbox {
+    background-color: #fff;
+    border: 1px solid rgba(0, 128, 0, 0.489); /* Green border */
+}
+
+/* Checkmark design */
+.checkmark {
+    display: none;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    width: 6px;
+    height: 12px;
+    border: solid green;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Show the checkmark when checkbox is checked */
+.hidden-checkbox:checked + .custom-checkbox .checkmark {
+    display: block;
+}
+
+/* Hover effect */
+.custom-checkbox:hover {
+    border-color: #bbb;
+}
+
+/* Optional checkbox label */
+.checkbox-label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    margin: 10px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0, 128, 0, 0.548);
+    border-radius: 5px;
+    outline: green;
+}
+
+.input-field {
+    transition: border-color 0.3s ease-in-out;
+    background: transparent;
+    color: gray;
+}
+.input-pass {
+    transition: border-color 0.3s ease-in-out;
+    background: transparent;
+    color: gray;
+}
+
+/* Placeholder should be hidden */
+.input-field::placeholder {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.input-pass::placeholder {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Floating Label Styling */
+.floating-pass {
+    position: absolute;
+    left: 140px;
+    top: 440px;
+    font-size: 16px;
+    pointer-events: none;
+    padding: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+.floating-field {
+    position: absolute;
+    left: 140px;
+    top: 300px;
+    font-size: 16px;
+    pointer-events: none;
+    padding: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* When the input field is focused or has content, move the label */
+.input-field:focus + .floating-label,
+.input-field:not(:placeholder-shown) + .floating-label {
+
+    font-size: 12px;
+}
+.input-pass:focus + .floating-pass,
+.input-pass:not(:placeholder-shown) + .floating-pass {
+
+    font-size: 12px;
+}
+
+/* Change input field border color on focus */
+.input-field:focus {
+    outline: none;
+}
+.input-pass:focus {
+    outline: none;
+}
+
+/* Adding a slight border-radius effect for smoother look */
+.input-container {
+    display: inline-block;
+    position: relative;
+    margin: 30px 0;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: rgb(70, 142, 70);
+    color: #fff;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    left: 30px;
+}
+
+button:disabled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgb(70, 142, 70);
+
+}
+
+.right {
+    object-fit: cover no-repeat;
+    transition: all 1s ease-in-out;
+    img{
+        margin-top: 25px;
+        margin-left: 25px;
+        border-radius: 30px;
+        width: 94%;
+        height: 94vh;
+    }
+}
+
+.loading-circle {
+    border: 2px solid rgba(132, 255, 132, 0.769);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes logoRotate {
+    0% { transform: scale(1) translate(-50%, -50%) rotate(0deg); }
+    100% { transform: scale(1) translate(-50%, -50%) rotate(360deg); }
+}
+
+.fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: expandFromCenter 1s ease forwards;
+}
+
+@keyframes shrinkCenter {
+    0% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+
+@keyframes expandFromCenter {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.logo-center {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation: logoRotate 1s ease forwards;
+    font-size: 48px;
+    z-index: 100;
+    opacity: 1;
+}
+
+.shrink-to-zero {
+    animation: shrinkCenter 0.5s ease forwards;
+}
+
+.show-elements {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.move-to-side {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: transform 1s ease-in-out, top 1s ease-in-out, left 1s ease-in-out;
+}
+
+.hide-elements {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.form-visible {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease;
+}

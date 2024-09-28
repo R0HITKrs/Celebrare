@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="top">
+                <div class="logo" id="logo">Logo</div>
+                <div class="side">
+                    <span>Are you a new costomer?</span>
+                    <button class="enroll">Enroll Now</button>
+                </div>
+            </div>
+            <div class="login-form" id="loginForm">
+                <h1>Welcome Back</h1>
+                <span>Sign in to our account</span>
+                <input type="text" placeholder="Online Id" required />
+                <input type="password" placeholder="Password" required />
+                <div>
+                    <input type="checkbox" id="customCheckbox" class="hidden-checkbox">
+                    <label for="customCheckbox" class="custom-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    Remember me
+                </div>
+                <button id="loginButton">Login</button>
+            </div>
+        </div>
+        <div class="right" id="rightImage">
+             <img src="./bg.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
