@@ -1,9 +1,8 @@
-/* styles.css */
 body, html {
     margin: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent scroll during animation */
+    overflow: hidden; 
 }
 
 .container {
@@ -55,14 +54,12 @@ body, html {
         border: 1px solid gray;
     }
 }
-/* Span text styling */
 span {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-/* Button styling */
 .enroll {
     padding: 10px 20px;
     cursor: pointer;
@@ -159,7 +156,6 @@ span {
     display: none;
 }
 
-/* Custom checkbox container */
 .custom-checkbox {
     display: inline-block;
     width: 24px;
@@ -172,13 +168,11 @@ span {
     transition: all 0.3s ease;
 }
 
-/* When the checkbox is checked, show the green checkmark */
 .hidden-checkbox:checked + .custom-checkbox {
     background-color: #fff;
-    border: 1px solid rgba(0, 128, 0, 0.489); /* Green border */
+    border: 1px solid rgba(0, 128, 0, 0.489);
 }
 
-/* Checkmark design */
 .checkmark {
     display: none;
     position: absolute;
@@ -191,17 +185,14 @@ span {
     transform: rotate(45deg);
 }
 
-/* Show the checkmark when checkbox is checked */
 .hidden-checkbox:checked + .custom-checkbox .checkmark {
     display: block;
 }
 
-/* Hover effect */
 .custom-checkbox:hover {
     border-color: #bbb;
 }
 
-/* Optional checkbox label */
 .checkbox-label {
     margin-left: 10px;
     font-size: 16px;
@@ -228,7 +219,6 @@ input {
     color: gray;
 }
 
-/* Placeholder should be hidden */
 .input-field::placeholder {
     opacity: 0;
     transition: all 0.3s ease-in-out;
@@ -238,7 +228,6 @@ input {
     transition: all 0.3s ease-in-out;
 }
 
-/* Floating Label Styling */
 .floating-pass {
     position: absolute;
     left: 140px;
@@ -258,7 +247,6 @@ input {
     transition: all 0.3s ease-in-out;
 }
 
-/* When the input field is focused or has content, move the label */
 .input-field:focus + .floating-label,
 .input-field:not(:placeholder-shown) + .floating-label {
 
@@ -270,7 +258,6 @@ input {
     font-size: 12px;
 }
 
-/* Change input field border color on focus */
 .input-field:focus {
     outline: none;
 }
@@ -278,7 +265,6 @@ input {
     outline: none;
 }
 
-/* Adding a slight border-radius effect for smoother look */
 .input-container {
     display: inline-block;
     position: relative;
